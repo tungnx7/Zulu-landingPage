@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+}
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+span {
+    display: block;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  background-color: white;
+  color: $gray-dark;
+}
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.container {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.button {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 12px;
+  background-color: transparent;
+  padding: 20px 40px;
+  outline: none;
+  cursor: pointer;
+  font-style: 16px;
+  color: $gray-dark;
+  line-height: normal;
+  transition: all 0.2s linear;
+  &--primary {
+    color: white;
+    background-color: $primary-color;   
+  }
+  &--outline {
+    border: 1px solid;
+    color: $gray-blur;
+  }  
+}
+.button--primary:hover {
+  background-color: rgba($color: $primary-color, $alpha: 0.8);
+}
+.button--outline:hover {
+  background-color: rgba($color: $primary-color, $alpha: 0.2);
+}
+@media screen and (max-width: 1079px) {
+  .button {
+    padding: 15px 30px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .button {
+    padding: 15px 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .button {
+    padding: 10px 32px;
+    font-size: 12px;
+  }
+}
+
+.block {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 85px;
+    &-caption {
+        text-transform: uppercase;
+        color: $gray;
+        margin-bottom: 45px;
+        position: relative;
+        display: inline-block;
+        padding: 0 10px;
+    }
+    &-caption:before,
+    &-caption:after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 30px;
+        background-color: $primary-color;
+        top: 50%;
+    }
+    &-caption:before {
+        transform: translateX(-100%);
+        left: 0;
+    }
+    &-caption:after {
+        transform: translateX(100%);
+        right: 0;
+    }
+    &-caption--left {
+      padding-left: 40px;
+      margin-bottom: 30px;
+    }
+    &-caption--left:after {
+      display: none;
+    }
+    &-caption--left:before {
+      transform: none;
+    }
+    &-heading {
+        font-weight: 600;
+        line-height: 1.4;
+        font-size: 45px;
+    }
+    @media screen and (max-width: 1023px) {
+      margin-bottom: 55px;
+      &-caption {
+        margin-bottom: 30px;
+      }
+    }
+    @media screen and (max-width: 767px) {
+      margin-bottom: 45px;
+      &-caption {
+        margin-bottom: 25px;
+      }
+      &-heading {
+        font-size: 35px;
+        line-height: 1.2;
+      }
+    }  
+}
+.text {
+  font-weight: 300;
+  color: $gray;
+  line-height: 1.6;
+}

@@ -1,0 +1,109 @@
+// .banner {
+//   display: flex;
+//   margin-bottom: 100px;
+//   align-items: center;
+//   &-info {
+//     width: 35%;
+//   }
+//   &-image {
+//     width: 65%;
+//     transform: translateX(10%);
+//   }
+//   &-heading {
+//     font-weight: 600;
+//     font-size: 55px;
+//     line-height: 1.4;
+//     margin-bottom: 50px;
+//   }
+//   &-desc {
+//     font-size: 16px;
+//     color: $gray;
+//     line-height: 1.6;
+//     margin-bottom: 50px;
+//   }
+//   &-links {
+//     .button:first-child {
+//       padding-right: 30px;
+//       padding-left: 30px;
+//       margin-right: 35px;
+//     }
+//   }
+//   @media screen and (max-width: 1279px) {
+//     &-heading {
+//       font-size: 45px;
+//     }
+//     &-links {
+//       .button:first-child {
+//         margin-right: 10px;
+//       }
+//     }
+//   }
+//   @media screen and (max-width: 1023px) {
+//     &-heading {
+//       font-size: 40px;
+//       margin-bottom: 30px;
+//     }
+//     &-desc {
+//       margin-bottom: 30px;
+//     }
+//     &-links {
+//       padding-left: 0;
+//       .button {
+//         padding-right: 15px;
+//         padding-left: 15px;
+//       }
+//       .button:first-child {
+//         padding-right: 20px;
+//         padding-left: 20px;
+//         margin-bottom: 15px;
+//       }
+//     }
+//   }
+//   @media screen and (max-width: 767px) {
+//     flex-direction: column;
+//     & > * {
+//       width: 100%;
+//     }
+//     &-heading {
+//       line-height: 1.2;
+//     }
+//   }
+// }
+.banner {
+    display: flex;
+    position: relative;
+    margin-bottom: 100px;
+    &-info {
+        width: 35%;
+    }
+    &-image {
+        width: 65%;
+        object-fit: cover;
+        position: absolute;
+        transform: translateX(62.5%);
+    }
+    &-heading {
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 1.2;
+        margin-bottom: 50px;
+    }
+    &-desc {
+        line-height: 1.6;
+        color: $gray-dark;
+        margin-bottom: 50px;
+    }
+    &-links {
+        .button:first-child {
+            margin-right: 35px;
+        }
+    }
+    @media screen and (max-width: 1279px) {
+        &-links {
+            .button:first-child {
+                margin-right: 15px;
+            }
+        }
+    }
+    
+}
