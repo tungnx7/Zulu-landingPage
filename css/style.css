@@ -11,6 +11,7 @@ body {
 img {
   display: block;
   max-width: 100%;
+  object-fit: cover;
 }
 
 a {
@@ -234,6 +235,11 @@ body {
     margin-right: 15px;
   }
 }
+@media screen and (max-width: 1023px) {
+  .banner {
+    flex-direction: column;
+  }
+}
 
 .work {
   margin-bottom: 120px;
@@ -300,6 +306,11 @@ body {
 @media screen and (max-width: 1279px) {
   .intro-image {
     transform: translate(80%, -10%);
+  }
+}
+@media screen and (max-width: 1023px) {
+  .intro {
+    flex-direction: column;
   }
 }
 
